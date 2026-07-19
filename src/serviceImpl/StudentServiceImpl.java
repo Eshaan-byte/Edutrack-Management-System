@@ -36,7 +36,15 @@ public class StudentServiceImpl implements StudentService {
             System.out.println("Student not found");
             return;
         }
-        System.out.println(student);
+        System.out.println("Student id "+student.getId());
+        System.out.println("Student email "+ student.getEmail());
+        System.out.println("Student name "+ student.getName());
+        System.out.println("Student age "+student.getAge());
+        System.out.println("Student courseId "+ student.getCourseId());
+        System.out.println("Student marks "+ student.getMarks());
+        System.out.println("Student feesPaid "+ student.getFeesPaid());
+        System.out.println("===========================================");
+
 
     }
 
@@ -63,11 +71,21 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public boolean updateMarks(int studentId, int marks) {
-        return false;
+        Student student = getStudentById(studentId);
+        if (student == null){
+            System.out.println("Student not found");
+            return false;
+        }
+        student.setMarks(marks);
+        return  true;
     }
 
     @Override
     public boolean removeStudent(int studentId) {
-        return false;
+        Student student= studentHashMap.remove(studentId);
+        if (student == null){
+            return false;
+        }
+        return true;
     }
 }
