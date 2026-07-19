@@ -7,6 +7,13 @@ public class Teacher extends Person {
 
     private  int experience;
 
+    public Teacher(int id, String name, String email, int phoneNumber, String subject, double salary, int experience) {
+        super(id, name, email, phoneNumber);
+        this.subject = subject;
+        this.salary = salary;
+        this.experience = experience;
+    }
+
     //Getter
 
     public String getSubject(){
@@ -37,8 +44,8 @@ public class Teacher extends Person {
     }
 
     //Constructor
-    public Teacher(String subject, int id, String name, String email, int phoneNumber){
-        super(id,name, email, phoneNumber);
-        this.subject=  subject;
-    }
+//    public Teacher(String subject, int id, String name, String email, int phoneNumber){
+//        super(id,name, email, phoneNumber);
+//        this.subject=  subject;
+//    }
 }
