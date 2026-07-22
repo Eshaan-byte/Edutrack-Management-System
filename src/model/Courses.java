@@ -75,10 +75,11 @@ public class Courses {
 
     //Constructor
 
-    public Courses(String courseId, String courseName, double courseFees, Teacher teacher){
+
+    public Courses(String courseId, String courseName, double courseFees, int durationMonths) {
         this.courseId = courseId;
         this.courseName = courseName;
         this.courseFees = courseFees;
-        this.teacher = teacher;
+        this.durationMonths = durationMonths;
     }
 }

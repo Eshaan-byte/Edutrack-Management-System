@@ -94,8 +94,5 @@ public class StudentMenu {
         System.out.println("Enter student id");
         int id=sc.nextInt();
         studentService.removeStudent(id);
-
     }
-
-
 }

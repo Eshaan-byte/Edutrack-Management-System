@@ -11,10 +11,13 @@ public class MainMenu {
 
     private final TeacherMenu teacherMenu;
 
-    public MainMenu(Scanner sc, StudentMenu studentMenu, TeacherMenu teacherMenu) {
+    private final CourseMenu courseMenu;
+
+    public MainMenu(Scanner sc, StudentMenu studentMenu, TeacherMenu teacherMenu, CourseMenu courseMenu) {
         this.sc = sc;
         this.studentMenu = studentMenu;
         this.teacherMenu = teacherMenu;
+        this.courseMenu = courseMenu;
     }
 
     public void start(Scanner sc, StudentService studentService){
@@ -29,7 +32,7 @@ public class MainMenu {
             else if (choice==2) {
                 teacherMenu.teacherMenu();
             } else if (choice==3) {
-                System.out.println("Course module is not ready");
+                courseMenu.courseMenu();
             } else if (choice ==4) {
                 System.out.println("Attendance module is not ready");
             }
